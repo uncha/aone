@@ -1,0 +1,146 @@
+/*
+* float 해제
+*/
+@mixin clearfix {
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	* html & { height: 1px }
+}
+
+/*
+* 기본 테이블
+*/
+@mixin basicTable {
+	width:100%;
+	
+	td{vertical-align: top;}
+}
+
+/**
+* 기본 버튼
+*
+* @param {border value} $border border크기와 색지정
+* @param {color value} $bgColor background 색지정
+* @param {color value} $color 글자색지정
+* @param {size value} $width 가로크기
+* @param {size value} $height 세로크기
+*/
+@mixin defaultButton($border:1px solid #c7c7c7, $bgColor:#FFF, $color:#666, $width:150px, $height:40px, $fontSize:14px){
+	display:block;
+	box-sizing:border-box;
+	margin:0 auto;
+	font-size:$fontSize;
+	line-height:14px;
+	text-align:center;
+	text-decoration:none;
+	cursor:pointer;
+	vertical-align: middle;
+	border:$border;
+	background-color:$bgColor;
+	color:$color;
+	width:$width;
+	line-height: $height;
+}
+
+/*
+* button group (default button들을 한줄로 묶어 주는 역할)
+*/
+@mixin buttonGroup{
+	@include clearfix;
+
+	text-align:center;
+	
+	> * {
+		display: inline-block !important;
+	}
+}
+
+/*
+* defaultTab
+*/
+@mixin defaultTab($size:2, $defaultColor:#CCC, $defaultFontColor:#000, $activeColor:#000, $activeFontColor:#FFF, $fontSize:16px, $height:30px){
+	> *{
+		@include clearfix;
+
+		> *{
+			&:first-child{padding-left:0;}
+			&:last-child{padding-right:0;}
+
+			float: left;
+			width: 100/$size + %;
+			text-align: center;
+			padding:0 4px;
+			font-size: $fontSize;
+			line-height: $fontSize;
+
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				padding:$height/2 0;
+				background:$defaultColor;
+				color: $defaultFontColor;
+			}
+		}
+
+		> .on{
+			a{
+				background: $activeColor;
+				color:$activeFontColor;
+			}
+		}
+	}
+}
+
+/*
+* px 퍼센트값 얻기
+*
+* @param {px} $targetSize - 퍼센트값으로 반환받을 px값
+* @param {px} $standardSize - 기준이 될 px값
+* @param {unit} $unit - %, vw, vh등 퍼센트 단위
+*/
+@function percent($targetSize:0, $standardSize:750, $unit:%) {
+	@return ($targetSize / $standardSize * 100) + $unit;
+}
+
+/*
+* Rem사이즈값 얻기
+*
+* @param {Number} $fontSize - rem으로 반환받을 폰트의 크기의 숫자값
+*/
+@function rem($fontSize, $baseSize:$BASE_FONT_SIZE) {
+	@return $fontSize / $baseSize + rem;
+}
+
+// transform polyfill
+@mixin transform($value) {
+	-webkit-transform: $value;
+	-moz-transform: $value;
+	-ms-transform: $value;
+	-o-transform: $value;
+	transform: $value;
+}
+
+// transition polyfill
+@mixin transition($target:transform, $time:1s, $timing:cubic-bezier(.25,0,0,1), $delay:0s) {
+	-webkit-transition: $target $time $timing $delay;
+	-moz-transition: $target $time $timing $delay;
+	-ms-transition: $target $time $timing $delay;
+	-o-transition: $target $time $timing $delay;
+	transition: $target $time $timing $delay;
+}
+
+/*
+* 말줄임
+*/
+@mixin abbreviation{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	overflow: hidden;
+}

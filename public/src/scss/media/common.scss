@@ -1,0 +1,45 @@
+$DESIGN_WIDTH:750;
+$BASE_FONT_SIZE:27;
+$BASE_LINE_HEIGHT:34;
+// 아이폰5
+@media screen and (max-width: 359px){
+	html, body {
+		font-size: $BASE_FONT_SIZE * (320 / $DESIGN_WIDTH) + px;
+		line-height: $BASE_LINE_HEIGHT * (320 / $DESIGN_WIDTH) + px;
+	}
+}
+// 갤럭시5
+@media screen and (min-width:360px) and (max-width: 374px){
+	html, body {
+		font-size: $BASE_FONT_SIZE * (360 / $DESIGN_WIDTH) + px;
+		line-height: $BASE_LINE_HEIGHT * (360 / $DESIGN_WIDTH) + px;
+	}
+}
+// 아이폰6
+@media screen and (min-width:375px) and (max-width: 411px){
+	html, body {
+		font-size: $BASE_FONT_SIZE * (375 / $DESIGN_WIDTH) + px;
+		line-height: $BASE_LINE_HEIGHT * (375 / $DESIGN_WIDTH) + px;
+	}
+}
+// Nexus 6P
+@media screen and (min-width:412px) and (max-width:413px){
+	html, body {
+		font-size: $BASE_FONT_SIZE * (412 / $DESIGN_WIDTH) + px;
+		line-height: $BASE_LINE_HEIGHT * (412 / $DESIGN_WIDTH) + px;
+	}
+}
+// 아이폰6+
+@media screen and (min-width:414px) and (max-width:767px){
+	html, body {
+		font-size: $BASE_FONT_SIZE * (414 / $DESIGN_WIDTH) + px;
+		line-height: $BASE_LINE_HEIGHT * (414 / $DESIGN_WIDTH) + px;
+	}
+}
+// 아이패드
+@media screen and (min-width:768px){
+	html, body {
+		font-size: $BASE_FONT_SIZE * (768 / $DESIGN_WIDTH) + px;
+		line-height: $BASE_LINE_HEIGHT * (768 / $DESIGN_WIDTH) + px;
+	}
+}

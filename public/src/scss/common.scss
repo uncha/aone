@@ -1,0 +1,181 @@
+$CONTAIN_SIZE:750px;
+$HTML_FONTSIZE:12;
+$MIN_WIDTH:750px;
+$IMAGE_ROOT:'/common/img/';
+
+// mixin
+@import "mixin/common.scss";
+@import "mixin/layout.scss";
+// media
+@import "media/common.scss";
+
+html, body {
+	height: 100%;
+	font-family: 'Noto Sans', sans-serif;
+    color:#000;
+
+	a{
+		&:link{color:#231f20; text-decoration: none}
+		&:hover{color:#231f20; text-decoration: none}
+		&:visited{color:#231f20; text-decoration: none}
+		&:active{color:#231f20; text-decoration: none}
+	}
+	
+	input[type=text], select, textarea{
+    	-webkit-appearance: none;
+    	-moz-appearance: none;
+    	appearance:none;
+    	border-radius:0;
+    	vertical-align: middle;
+    	border:1px solid #CCC;
+    	box-sizing:border-box;
+    	background: #FFF;
+    }
+
+    input[type=checkbox]{
+    	vertical-align: middle;
+    	border-radius:0;
+    }
+
+    select{
+        padding-right: 40px;
+        background: url('/resources/img/ico_select.gif') no-repeat 95% 50%;
+        -webkit-appearance: none;
+    }
+}
+
+legend, caption{display:none;}
+
+// common
+#header{
+    width: 100%;
+    overflow:hidden;
+    position: absolute;
+    top:0;
+    z-index:999;
+
+    .header-cont{
+        background: #FFF;
+        height: rem(100);
+        
+        .logo{
+            position: absolute;
+            width: rem(81);
+            top:rem(20);
+            left:rem(40);
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .btn-menu{
+            position: absolute;
+            display: block;
+            top:rem(37);
+            right: rem(40);
+            width: rem(54);
+            height: rem(24);
+            background: url(/common/img/btn_menu.png) center no-repeat;
+            background-size:100%;
+        }
+
+    }
+
+    #gnb{
+
+        @include transition(right, 0.4s);
+
+        width: rem(566);
+        background: #FFF;
+        position: absolute;
+        right:rem(-566);
+        top:rem(0);
+        box-sizing: border-box;
+        padding:0 rem(30);
+
+        &.on{
+            right:0;
+        }
+
+        .gnb-header{
+            height: rem(110);
+            border-bottom: 2px solid #000;
+            position: relative;
+
+            .btn-menu-close{
+                display: block;
+                width: rem(67);
+                height: rem(66);
+                position: absolute;
+                right:0;
+                top:rem(19);
+                background: url(/common/img/btn_menu_close.png) center no-repeat;
+                background-size:100%;
+            }
+        }
+
+        .gnb-cont{
+            padding:rem(50) rem(44) rem(252);
+
+            .depth1{
+                > li{
+                    > a {
+                        line-height: rem(92);
+                        font-size: rem(45);
+                    }
+
+                    .depth2{
+                        display: none;
+                        li{
+                            position: relative;
+                            padding-left:rem(40);
+
+                            > a{
+                                line-height: rem(74);
+                                font-size:rem(31);
+                            }
+
+                            &:before{
+                                content:'';
+                                display: block;
+                                height: 1px;
+                                width: rem(21);
+                                border-bottom: 1px solid #000;
+                                position: absolute;
+                                left:0;
+                                top:rem(36);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gnb-bg{
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+    }
+}
+
+#contents{
+    padding-top:rem(100);
+
+    .box01{
+        height: rem(100);
+        width: rem(375);
+        background: blue;
+    }
+    .box02{
+        height: rem(100);
+        width: 50%;
+        background: red;
+    }
+}
+
+@import 'pages/brand.scss';
+@import 'pages/csr.scss';
+@import 'pages/recruit.scss';

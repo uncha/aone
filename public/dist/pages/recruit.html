@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>에이원</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta name="Description" content="에이원" />
+<meta name="Keywords" content="에이원" />
+<link rel="stylesheet" href="/common/css/reset.css" type="text/css" />
+<link rel="stylesheet" href="/common/css/common.css" type="text/css" />
+<script type="text/javascript" src="/common/libs/jquery/js/jquery.min.js"></script>
+<script type="text/javascript" src="/common/libs/system/system.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<link rel="stylesheet" href="/common/js/common.js" type="text/css" />
+<script>
+// set our baseURL reference path
+SystemJS.config({
+    baseURL: '/common/js'
+});
+// common.js 자동으로 load
+SystemJS.import('es6.js').then(function(){
+	SystemJS.import('common.js').then(function(){
+		if(typeof systemInit === 'function') systemInit();
+	});
+});
+</script>
+</head>
+<body>
+<header id="header">
+	<div class="header-cont">
+		<h1 class="logo"><a href="/"><img src="/common/img/logo.png" /></a></h1>
+		<a href="#" class="btn-menu"></a>
+	</div>
+	<nav id="gnb">
+		<div class="gnb-header">
+			<div class="sns"></div>
+			<a href="#" class="btn-menu-close"></a>
+		</div>
+		<div class="gnb-cont">
+			<ul class="depth1">
+				<li><a href="javascript:;">MAIN</a></li>
+				<li>
+					<a href="javascript:;">COMPANY</a>
+					<ul class="depth2">
+						<div class="menu-wrap">
+							<li><a href="/introduce/introduce.html">기업이념</a></li>
+							<li><a href="/introduce/brand_history.html">연혁</a></li>
+							<li><a href="/introduce/company.html">CI소개</a></li>
+							<li><a href="/introduce/company.html">오시는길</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="/pages/brand.html">BRAND</a></li>
+				<li><a href="/pages/recruit.html">RECRUIT</a></li>
+				<li><a href="/pages/csr.html">CSR</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="gnb-bg"></div>
+</header>
+<section id="contents" class="recruit">
+	<div class="recruit-cont">
+		<div class="top"><img src="/common/img/recruit/top.jpg" /></div>
+		<div class="section01">
+			<h3>인재상</h3>
+			<div class="list">
+				<ul>
+					<li>
+						<dl>
+							<dt>01</dt>
+							<dd>
+								<strong>정직</strong>
+								<p>HONEST</p>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>02</dt>
+							<dd>
+								<strong>성실</strong>
+								<p>FAITHFULNESS</p>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>03</dt>
+							<dd>
+								<strong>창의</strong>
+								<p>ORIGINALITY</p>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<p class="box-tit">여러분의 상상력과 창의력을 <br />(주)에이원에서 활짝 펼처보세요.</p>
+			<p class="txt">여러분의 상상력과 창의력을 (주)에이원에서 활짝 펼처보세요. 어린 시절 우리는 즐거운 상상을 하며 아름다운 세상을 꿈꾸었습니다. 날C아다니는 C자동차, 영화나 만화에서 등장하는 변신하는 로봇 등 누구나 한번쯤 이런 상상을 하면서 꿈을 키웠을 것입니다.</p>
+			<p class="txt">그 시절 여러분들의 상상력과 톡톡 튀는 아이디어를 한번 떠올려 보십시오. 그리고 지금 에이원에서 여러분들의 생각들을 마음껏 펼쳐 보시기 바랍니다. 에이원의 임직원들은 우리 사회의 미래를 책임지는 아기를 위해 꿈과 희망을 함께 키워나갈 수 있는 인재를 기다립니다.</p>
+			<p class="txt"><strong>아이는 절대 거짓말을 하지 않습니다.</strong></p>
+			<p class="txt">유아용품 회사의 가장 중요한 경영 핵심 가치 또한 ‘정직과 안전’이라고 생각합니다. (주)에이원의 인재상 또한 그러한 기본 경영 철학을 바탕을 두고 있습니다.</p>
+		</div>
+		<div class="top"><img src="/common/img/recruit/img01.jpg" /></div>
+		<div class="section02">
+			<h3>복리후생</h3>
+			<div class="list">
+				<ul>
+					<li>
+						<p>
+							<span class="img"><img src="/common/img/recruit/ico_list01.jpg" /></span>
+							<span>4대보험 및 퇴직연금</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="img"><img src="/common/img/recruit/ico_list02.jpg" /></span>
+							<span>가족 건강검진</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="img"><img src="/common/img/recruit/ico_list03.jpg" /></span>
+							<span>여성사원들의 자녀출산 및 양육지원</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="img"><img src="/common/img/recruit/ico_list04.jpg" /></span>
+							<span>장기근속 유급휴가</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="img"><img src="/common/img/recruit/ico_list05.jpg" /></span>
+							<span>가족 수당제</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="img"><img src="/common/img/recruit/ico_list06.jpg" /></span>
+							<span>유연 근무제도</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="img"><img src="/common/img/recruit/ico_list07.jpg" /></span>
+							<span>기타 수당</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="img"><img src="/common/img/recruit/ico_list08.jpg" /></span>
+							<span>콘도 사용권</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="img"><img src="/common/img/recruit/ico_list09.jpg" /></span>
+							<span>패밀리데이<br />(매월 셋째 주 금요일 오후 4시 퇴근)</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="section03">
+			<div class="top"><img src="/common/img/recruit/img02.jpg" /></div>
+			<h3>가족친화 인증제도에 선정</h3>
+			<p>(주)에이원은 여성가족부에서 주관하는 ‘가족친화 인증제도에<br /> 선정된 업체로서 기업의 근무 제도와 조직 문화, 직원 만족도,<br /> CEO 경영 리더십 등 평가한 모범적 가족 친화 제도 운영<br /> 기업입니다. 일과 가정에 균형을 잡고 작장생활에<br /> 만족을 느껴야 직원들이 업무의 집중도 및 조직 전체의<br /> 역량을 키울 수 있다고 믿습니다.</p>
+			<a class="btn-recruit" href="#"><img src="/common/img/recruit/btn_recruit.png" alt="입사지원/></a>
+		</div>
+	</div>
+</section>
+<footer id="footer">
+	
+</footer>
+</body>
+</html>

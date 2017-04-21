@@ -1,0 +1,58 @@
+#contents.brand{
+	.brand-cont{
+		.top{
+			img{
+				width: 100%;
+			}
+		}
+
+		.section{
+			padding:0 0 rem(74);
+			border-bottom: rem(9) solid #acacac;
+
+			&:nth-child(odd){
+				@include clearfix;
+
+				text-align: right;
+
+				.btn-link{
+					float: right;
+				}
+			}
+
+			&:last-child{
+				border:0;
+			}
+
+			.img{
+				img{
+					width: 100%;
+				}
+			}
+
+			h3{
+				padding:rem(70) rem(100) rem(20);
+				font-size: rem(55);
+				line-height: rem(50);
+				color:#ff810c;
+			}
+
+			.txt{
+				padding:0 rem(100);
+			}
+
+			.btn-link{
+				width: rem(70);
+				height: rem(70);
+				position: relative;
+				display: block;
+				padding:rem(60) rem(100) 0;
+
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}

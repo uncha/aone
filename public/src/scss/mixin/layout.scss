@@ -1,0 +1,243 @@
+@mixin defaultPopup{
+	display:none;
+	position:absolute;
+	width:800px;
+	border:1px solid #CCC;
+	background:#FFF;
+	z-index:999;
+
+	h2{
+		font-size: 17px;
+		width: 100%;
+	}
+
+	.btn-popup-close{
+		position: absolute;
+		top:20px;
+		right:20px;
+		width: 51px;
+		height: 56px;
+		background:url($IMAGE_ROOT + 'btn_popup_close.png') center no-repeat;
+	}
+
+	textarea, select{
+		width: 100%; 
+		padding:9.5px 5px;
+		margin:0;
+		font-size: 15px;
+		border:1px solid #CCC;
+	}
+}
+
+@mixin defaultTable{
+	@include basicTable;
+	
+	tr{
+		th{
+			text-align: left;
+			font-size:15px;
+			padding:17px 0;
+		}
+		td{
+			padding:5px;
+			vertical-align: middle;
+
+			input{
+				width: 100%;
+				padding:0;
+				margin:0;
+				font-size: 15px;
+				padding:9.5px 5px;
+				border:1px solid #CCC;
+			}
+		}
+
+		.address01{
+			input{
+				width:388px;
+			}
+
+			button{
+				float:right;
+				padding:9px 5px;
+				font-size: 14px;
+				color:#444;
+				background:#FFF;
+				border:2px solid #AAA;
+			}
+		}
+	}
+}
+
+@mixin boardList{
+	@include basicTable;
+	
+	margin-top:msize(30px);
+
+	th{
+		&:first-child{
+			background:url($IMAGE_ROOT + 'video_event/table_head_left.png') left top no-repeat;
+			background-size:auto 100%;
+		}
+		&:last-child{
+			background:url($IMAGE_ROOT + 'video_event/table_head_right.png') right top no-repeat;
+			background-size:auto 100%;
+		}
+
+		padding:msize(23px) 0 msize(23px) 0;
+		color:#000;
+		font-size: getRem(22px);
+		line-height: getRem(22px);
+		color:#FFF;
+		background:url($IMAGE_ROOT + 'video_event/table_head.png') center top no-repeat;
+		background-size:auto 100%;
+	}
+
+	td{
+		text-align:center;
+		padding:12.5px;
+		font-size:getRem(22px);
+		line-height:getRem(22px);
+		color:#000;
+	}
+
+	.contents{
+		text-align:left;
+	}
+
+	.button-group{
+		@include buttonGroup;
+		text-align: right;
+		padding-bottom: 20px;
+		border:1px solid red;
+
+		a{
+			@include defaultButton(1px solid #7d7d7d, #FFF, #2e2e2e, 94px, 30px);
+		}
+	}
+}
+
+@mixin listPaging{
+	padding:msize(46px) 0 msize(90px) 0;
+	text-align: center;
+
+	.numbers{
+		display: inline-block;
+		margin-top: -8px;
+
+		li{
+			display: inline-block;
+			padding:6px 0;
+			width: 26px;
+			text-align: center;
+			line-height: 0;
+			margin:0 7px;
+			vertical-align: middle;
+
+			a{
+				font-size: 13px;
+				line-height: 13px;
+				color:#666;
+			}
+			a:hover{color:#666}
+		}
+
+		.current{
+			background:#333;
+			a{color: #FFF;}
+			a:hover{color:#FFF}
+			border-radius:100%;
+		}
+	}
+
+	.prev{
+		background:url($IMAGE_ROOT + 'btn_prev_list.gif') center no-repeat;
+		background-size:100%;
+		width: msize(28px);
+		height: msize(32px);
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.next{
+		background:url($IMAGE_ROOT + 'btn_next_list.gif') center no-repeat;
+		background-size:100%;
+		width: msize(28px);
+		height: msize(32px);
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+@mixin applyForm{
+	padding:0 msize(40px);
+
+	h2{
+		font-size: getRem(24);
+		line-height: getRem(24);
+		vertical-align: middle;
+		padding:msize(50px) 0 msize(30px) 0;
+
+		img{
+			padding-right: msize(15px);
+			width:msize(34px);
+			height: msize(34px);
+			vertical-align: middle;
+		}
+	}
+
+	table{
+		@include basicTable;
+
+		th{
+			text-align: left;
+			font-size: getRem(22);
+			line-height: getRem(22);
+			padding:msize(20px) msize(10px);
+		}
+
+		td{
+			padding:msize(5px);
+		}
+
+		.address01{
+			padding-right: msize(195px);
+			position: relative;
+
+			.search-post{	
+				@include defaultButton(2px solid #aaa, #FFF, #444, msize(180px), msize(60px), 11px);
+				position: absolute;
+				top:2px;
+				right: 2px;
+				vertical-align: middle;
+				box-sizing:border-box;
+			}
+		}
+
+		select, input[type=text]{
+			width:100%;
+			padding:0;
+			padding:0 msize(10px);
+			font-size: 11px;
+			line-height: msize(68px);
+			box-sizing:border-box;
+			vertical-align: middle;
+		}
+	}
+
+	textarea{width:100%}
+
+	.button-group{
+		text-align: center;
+		padding:msize(50px) 0 msize(90px) 0;
+
+		.btn-submit{
+			background:url($IMAGE_ROOT + 'video_event/btn_submit.png') center no-repeat;
+			background-size:100%;
+			border:0;
+			width:msize(560px);
+			height: msize(110px);
+			text-indent:-9999px;
+		}
+	}
+}
