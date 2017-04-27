@@ -26,8 +26,8 @@ gulp.task('webserver', function() {
 	gulp.src(dist + '/')
 	.pipe(webserver({
 		livereload: true,
-		//port:8004,
-		//host:'192.168.11.172',
+		port:8010,
+		host:'192.168.11.172',
 		open:true
 	}));
 });

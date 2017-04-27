@@ -176,6 +176,16 @@ legend, caption{display:none;}
     }
 }
 
+#footer{
+    background: #2d2d2d;
+    padding:rem(27) 0;
+    text-align: center;
+    color:#FFF;
+    font-size: rem(20);
+    line-height: rem(20);
+}
+
+@import 'pages/main.scss';
 @import 'pages/brand.scss';
 @import 'pages/csr.scss';
 @import 'pages/recruit.scss';

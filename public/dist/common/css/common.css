@@ -193,6 +193,95 @@ legend, caption {
     width: 50%;
     background: red; }
 
+#footer {
+  background: #2d2d2d;
+  padding: 1rem 0;
+  text-align: center;
+  color: #FFF;
+  font-size: 0.74074rem;
+  line-height: 0.74074rem; }
+
+#contents.main .visual ul {
+  position: relative;
+  overflow: hidden; }
+  #contents.main .visual ul li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    text-align: center;
+    background: #CCC;
+    padding: 0 4.14815rem;
+    box-sizing: border-box; }
+    #contents.main .visual ul li:nth-child(2) {
+      background: url(/common/img/main/visual_bg02.gif);
+      background-size: cover; }
+    #contents.main .visual ul li:nth-child(3) {
+      background: url(/common/img/main/visual_bg03.gif);
+      background-size: cover; }
+    #contents.main .visual ul li.on {
+      top: 0; }
+    #contents.main .visual ul li .cont {
+      position: relative;
+      background: #FFF;
+      top: 7.40741rem;
+      width: 100%;
+      padding: 3.51852rem 0 1.92593rem; }
+      #contents.main .visual ul li .cont h2 {
+        font-size: 6.66667rem;
+        line-height: 6.66667rem;
+        color: #FFF;
+        letter-spacing: -0.37037rem;
+        position: absolute;
+        top: -5.55556rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto; }
+      #contents.main .visual ul li .cont h3 {
+        font-size: 2.40741rem;
+        line-height: 2.40741rem;
+        color: #ff8b3e;
+        letter-spacing: -0.03704rem;
+        position: relative;
+        margin-bottom: 1.03704rem; }
+        #contents.main .visual ul li .cont h3:before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 2.40741rem;
+          height: 0.11111rem;
+          left: 0;
+          right: 0;
+          top: -1.85185rem;
+          margin: 0 auto;
+          background: #ff8b3e; }
+      #contents.main .visual ul li .cont .txt01 {
+        font-size: 0.92593rem;
+        line-height: 1.11111rem; }
+      #contents.main .visual ul li .cont .txt02 {
+        color: #464646;
+        margin-top: 1.85185rem; }
+      #contents.main .visual ul li .cont .btn-more {
+        width: 4.22222rem;
+        height: 4.18519rem;
+        display: block;
+        margin: 3.33333rem auto 0; }
+        #contents.main .visual ul li .cont .btn-more img {
+          width: 100%;
+          height: 100%; }
+    #contents.main .visual ul li .btn-down {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: 0;
+      line-height: 0;
+      width: 2.03704rem;
+      height: 3.25926rem; }
+      #contents.main .visual ul li .btn-down img {
+        width: 100%;
+        height: 100%; }
+
 #contents.brand .brand-cont .top img {
   width: 100%; }
 
